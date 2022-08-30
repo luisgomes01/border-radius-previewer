@@ -1,41 +1,46 @@
-#root {
-  max-width: 1280px;
+.app {
+  display: grid;
+  grid-template-rows: 50px 350px 50px;
+  grid-template-areas:
+      "top-left top-right"
+      "simple-card simple-card"
+      "bottom-left bottom-right";
+  place-items: center;
+  min-width: 100vw;
+  margin: auto 0;
+}
+
+.radius-sample {
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 300px;
+  background: linear-gradient(to right, rgb(192, 72, 72), rgb(72, 0, 72));
+  grid-area: simple-card;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.top-left {
+  grid-area: top-left;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-right {
+  grid-area: top-right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.blank {
+  width: 200px;
+  grid-area: blank;
 }
 
-.card {
-  padding: 2em;
+.bottom-left {
+  grid-area: bottom-left;
 }
 
-.read-the-docs {
-  color: #888;
+.bottom-right {
+  grid-area: bottom-right;
+}
+
+.app label {
+  color: #fff;
 }
