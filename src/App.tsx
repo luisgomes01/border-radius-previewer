@@ -19,7 +19,7 @@ export const App: React.FC = () => {
           <label>Top Left Radius</label>
           <br />
           <input
-            className=""
+            className="border-radius-input"
             name="topLeftRadius"
             onChange={handleChange}
           />
@@ -27,7 +27,7 @@ export const App: React.FC = () => {
         <div className="top-right">
           <label>Top Right Radius</label>
           <br />
-          <input className="" name="topRightRadius" onChange={handleChange} />
+          <input className="border-radius-input" name="topRightRadius" onChange={handleChange} />
         </div>
         <div
           className="radius-sample"
@@ -41,12 +41,12 @@ export const App: React.FC = () => {
         <div className="bottom-left">
           <label>Bottom Left Radius</label>
           <br />
-          <input className="" name="bottomLeftRadius" onChange={handleChange}/>
+          <input className="border-radius-input" name="bottomLeftRadius" onChange={handleChange}/>
         </div>
         <div className="bottom-right">
           <label>Bottom Right Radius</label>
           <br />
-          <input className="" name="bottomRightRadius" onChange={handleChange}/>
+          <input className="border-radius-input" name="bottomRightRadius" onChange={handleChange}/>
         </div>
       </div>
   );
