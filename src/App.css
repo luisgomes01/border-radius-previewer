@@ -5,7 +5,8 @@
   grid-template-areas:
       "top-left . top-right"
       ". simple-card ."
-      "bottom-left button bottom-right";
+      "bottom-left . bottom-right"
+      ". button .";
   place-items: center;
   min-width: 100vw;
   align-content: center;
@@ -18,6 +19,15 @@
   height: 300px;
   background: linear-gradient(to right, rgb(192, 72, 72), rgb(72, 0, 72));
   grid-area: simple-card;
+  vertical-align: center;
+}
+
+code {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 
@@ -58,6 +68,7 @@
 
 .copy-to-clipboard {
   grid-area: button;
+  height: 500px;
 }
 
 .copy-to-clipboard-btn {
@@ -119,3 +130,9 @@
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+
+.copy-to-clipboard {
+  color: #fff;
+  height: 100%;
+}
+

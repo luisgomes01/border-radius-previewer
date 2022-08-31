@@ -9,12 +9,14 @@ export const App: React.FC = () => {
     bottomRightRadius: "",
   });
 
+  const cssCode = `border-radius: ${radius.topLeftRadius} ${radius.topRightRadius} ${radius.bottomRightRadius} ${radius.bottomLeftRadius}`
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRadius({ ...radius, [e.target.name]: e.target.value });
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(`border-radius: ${radius.topLeftRadius} ${radius.topRightRadius} ${radius.bottomRightRadius} ${radius.bottomLeftRadius}`);
+    navigator.clipboard.writeText(cssCode);
     alert('Code copied to clipboard')
   };
 
@@ -46,7 +48,7 @@ export const App: React.FC = () => {
           borderBottomLeftRadius: radius.bottomLeftRadius,
           borderBottomRightRadius: radius.bottomRightRadius,
         }}
-      ></div>
+      ><code>{cssCode}</code></div>
       <div className="bottom-left">
         <label>Bottom Left Radius</label>
         <br />
@@ -57,6 +59,9 @@ export const App: React.FC = () => {
         />
       </div>
       <div className="copy-to-clipboard">
+        <div className="code-text-area">
+          
+        </div>
         <button className="copy-to-clipboard-btn" onClick={copyToClipboard}>
           Copy code to clipboard
         </button>
