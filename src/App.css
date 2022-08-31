@@ -91,7 +91,7 @@
 }
 
 .copy-to-clipboard-btn:active {
-  color: #000
+  color: #000;
 }
 
 .copy-to-clipboard-btn:active:after {
