@@ -43,6 +43,9 @@ export const App: React.FC = () => {
           <br />
           <input className="border-radius-input" name="bottomLeftRadius" onChange={handleChange}/>
         </div>
+        <div className="copy-to-clipboard">
+          <button className="copy-to-clipboard-btn">Copy to clipboard</button>
+        </div>
         <div className="bottom-right">
           <label>Bottom Right Radius</label>
           <br />
